@@ -1,0 +1,53 @@
+import React from "react";
+import Image from "next/image";
+import { Button } from "flowbite-react";
+
+const Landing = () => {
+  return (
+    <>
+      <div className="pt-[150px] pb-[100px] bg-[cornSilk] flex flex-col items-center justify-around">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8">
+          <div className="flex flex-col items-center lg:hidden">
+            <Image
+              className="width-[70%]"
+              src="/assets/shiny-happy.png"
+              alt="Landing"
+              width={400}
+              height={500}
+            />
+          </div>
+          <div className="flex flex-col items-center lg:items-start lg:ml-20">
+            <div className="text-3xl lg:text-5xl font-bold text-center lg:text-left">
+              Get Paid Faster, Work Smarter:{" "}
+              <span className="text-pakistanGreen">Invoicing Simplified</span>
+            </div>
+            <div className="text-lg text-center lg:text-left text-gray-600 mt-4">
+              Say goodbye to late payments and manual paperwork. Our intuitive
+              invoicing app makes it easy to create, send, and track invoices
+              from anywhere.
+            </div>
+            <div className="flex flex-row items-center gap-4 mt-8">
+              <Button color="dark" className="bg-pakistanGreen" size="lg">
+                Get Started
+              </Button>
+              <Button color="dark" size="lg" outline>
+                Learn More
+              </Button>
+            </div>
+          </div>
+          <div className="hidden lg:flex flex-col items-center">
+            <Image
+              className="width-[70%]"
+              src="/assets/shiny-happy.png"
+              alt="Landing"
+              width={400}
+              height={500}
+            />
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Landing;
