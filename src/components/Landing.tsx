@@ -1,6 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import { Button } from "flowbite-react";
+import { Aleo } from 'next/font/google'
+
+const aleo = Aleo({ subsets: ['latin'] })
 
 const Landing = () => {
   return (
@@ -17,9 +20,9 @@ const Landing = () => {
             />
           </div>
           <div className="flex flex-col items-center lg:items-start lg:ml-20">
-            <div className="text-3xl lg:text-5xl font-bold text-center lg:text-left">
+            <div className={`text-3xl lg:text-5xl font-bold font-aleo text-center lg:text-left ${aleo.className}`}>
               Get Paid Faster, Work Smarter:{" "}
-              <span className="text-pakistanGreen">Invoicing Simplified</span>
+              <span className="text-pakistanGreen"><span className="">Invoicing</span> Simplified</span>
             </div>
             <div className="text-lg text-center lg:text-left text-gray-600 mt-4">
               Say goodbye to late payments and manual paperwork. Our intuitive

@@ -38,7 +38,7 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={`fixed w-full z-50 ${navbarBg} transition-all duration-300 ease-in-out`}
+        className={`fixed w-full z-40 ${navbarBg} transition-all duration-300 ease-in-out`}
       >
         <div className="relative">
           <div

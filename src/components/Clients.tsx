@@ -7,7 +7,7 @@ const Clients = () => {
   return (
     <>
       <hr />
-      <div className="bg-[cornSilk] py-8">
+      <div className=" py-8">
         <div className="flex flex-col items-center gap-4 mb-5">
           <div className="uppercase text-gray-700 text-center text-sm">
             clients that trust us
