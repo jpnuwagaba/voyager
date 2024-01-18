@@ -11,7 +11,10 @@ interface Props {
   link: string;
   callToAction: string;
   callToActionBgColor?: string;
-}
+};
+import {Aleo} from 'next/font/google'
+
+const aleo = Aleo({subsets: ['latin']})
 
 const InfoSection: FC<Props> = ({
   title,
@@ -28,7 +31,7 @@ const InfoSection: FC<Props> = ({
       <div className="container grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center py-8 lg:py-16">
         <div>
           <div className="text-sm uppercase text-gray-600 mb-4">{title}</div>
-          <div className="text-4xl font-bold mb-4">{tagline}</div>
+          <div className={`text-4xl font-bold mb-4 ${aleo.className}`}>{tagline}</div>
           <div className="text-lg text-gray-600 mb-8">{description}</div>
           <Link href={link}>
             <Button className={callToActionBgColor} color="dark" size="lg">

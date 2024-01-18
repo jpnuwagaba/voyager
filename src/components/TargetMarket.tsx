@@ -38,7 +38,7 @@ const TargetMarket = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveTab((prev) => (prev + 1) % targetMarket.length);
-    }, 8000);
+    }, 12000);
     return () => clearInterval(interval);
   }, [targetMarket.length]);
 
@@ -46,7 +46,7 @@ const TargetMarket = () => {
     <>
       <div className="container py-8 md:py-16">
         <div className="text-left md:text-center">
-          <div className={`text-3xl font-bold ${aleo.className}`}>
+          <div className={`text-2xl md:text-3xl font-bold ${aleo.className}`}>
             Empowering businesses of all sizes worldwide
           </div>
           <div className="text-gray-600 mt-4">
