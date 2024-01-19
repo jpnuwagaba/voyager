@@ -5,13 +5,14 @@ import Image from "next/image";
 import client from "@/sanity/sanity.client";
 export type TargetMarketType = {
   name: string;
-  description: string;
+  description: any;
   image: string;
   slug: string;
   callToAction: string;
   imageUrl: string; // Add the 'imageUrl' property to the type definition
 };
 import { Aleo } from "next/font/google";
+import { PortableText } from '@portabletext/react';
 
 const aleo = Aleo({ subsets: ["latin"] });
 
@@ -80,8 +81,8 @@ const TargetMarket = () => {
               src={targetMarket[activeTab]?.imageUrl} // Fix the property name
             />
           </div>
-          <div className={`text-lg md:text-xl lg:text-3xl font-bold text-pakistanGreen transition-all duration-300 ease-in-out ${aleo.className}`}>
-            {targetMarket[activeTab]?.description}
+          <div className={`text-lg md:text-xl lg:text-3xl font- text-pakistanGreen transition-all duration-300 ease-in-out ${aleo.className}`}>
+            <PortableText value={targetMarket[activeTab]?.description} />
           </div>
         </div>
       </div>
