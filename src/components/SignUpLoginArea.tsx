@@ -27,7 +27,7 @@ const SignUpLoginArea = () => {
                     Ready to get started? Welcome to Voyager!
                   </div>
                   <div className="text-sm md:text-base mb-3">
-                    We're excited to help you streamline your invoicing and get
+                    We are excited to help you streamline your invoicing and get
                     paid faster. Sign up for your free account today and
                     experience the ease of creating, sending, and tracking
                     invoices online.
