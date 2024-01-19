@@ -4,6 +4,7 @@ import Image from 'next/image'
 import ColorPalette from '@/components/ColorPalette'
 import Clients from '@/components/Clients'
 import TargetMarket from '@/components/TargetMarket'
+import SignUpLoginArea from '@/components/SignUpLoginArea'
 
 export default function Home() {
   return (
@@ -12,7 +13,8 @@ export default function Home() {
       <TargetMarket />
       <Clients />
       <FeaturesAndBenefits />
-      <ColorPalette />
+      {/* <ColorPalette /> */}
+      <SignUpLoginArea />
     </>
   )
 }

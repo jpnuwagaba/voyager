@@ -1,3 +1,4 @@
 import targetMarket from "./targetMarket"
+import appFeature from "./appFeature"
 
-export const schemaTypes = [targetMarket]
+export const schemaTypes = [targetMarket, appFeature]
