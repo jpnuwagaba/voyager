@@ -14,7 +14,7 @@ import { Button } from "flowbite-react";
 import {HiOutlineArrowNarrowRight} from 'react-icons/hi'
 
 const FeaturesComponent = () => {
-  const [features, setFeatures] = React.useState<FeaturesType[]>([]);
+  const [features, setFeatures] = useState<AppFeatureType[]>([]);
 
   const query = `*[_type == "appFeature"]{
     name,
