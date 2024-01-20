@@ -20,11 +20,11 @@ const Testimonial = () => {
                     E-Commerce
                   </div>
                   <div className={`text-white text-3xl ${aleo.className}`}>
-                    "Voyager has completely transformed the way we handle
+                    {`"`}Voyager has completely transformed the way we handle
                     invoicing. What used to take us hours to manually input and
-                    process can now be done in a fraction of the time. We're
+                    process can now be done in a fraction of the time. We are
                     able to get a real-time view of our financials and track our
-                    cash flow with ease. It's a game-changer for our business."
+                    cash flow with ease. It is a game-changer for our business.{`"`}
                   </div>
                   <div className="flex flex-row space-x-6 items-center">
                     <Image
