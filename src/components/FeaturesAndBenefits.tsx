@@ -7,7 +7,7 @@ import FeaturesComponent from "./FeaturesComponent";
 const FeaturesAndBenefits = () => {
   return (
     <>
-      <div className="bg-[cornSilk]">
+      <div className="bg-[cornSilk] py-8 md:py-24">
         <InfoSection
           title="Features and Benefits"
           tagline="The best of both worlds"
@@ -15,6 +15,7 @@ const FeaturesAndBenefits = () => {
           direction="left"
           component={
             <Image
+              className="rounded-xl"
               src={`/assets/woman-smiling.jpg`}
               width={500}
               height={500}
@@ -25,7 +26,9 @@ const FeaturesAndBenefits = () => {
           callToAction="Get Started Today"
           callToActionBgColor="bg-pakistanGreen"
         />
-        {/* <FeaturesComponent /> */}
+        <div className="mt-8 md:mt-16">
+        <FeaturesComponent />
+        </div>
       </div>
     </>
   );

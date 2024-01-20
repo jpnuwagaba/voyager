@@ -28,7 +28,7 @@ const InfoSection: FC<Props> = ({
 }) => {
   return (
     <>
-      <div className="container grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center py-8 lg:py-16">
+      <div className="container grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
         <div>
           <div className="text-sm uppercase text-gray-600 mb-4">{title}</div>
           <div className={`text-4xl font-bold mb-4 ${aleo.className}`}>{tagline}</div>

@@ -5,6 +5,7 @@ import ColorPalette from '@/components/ColorPalette'
 import Clients from '@/components/Clients'
 import TargetMarket from '@/components/TargetMarket'
 import SignUpLoginArea from '@/components/SignUpLoginArea'
+import Testimonial from '@/components/Testimonial'
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Clients />
       <FeaturesAndBenefits />
       {/* <ColorPalette /> */}
+      <Testimonial />
       <SignUpLoginArea />
     </>
   )

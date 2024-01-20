@@ -9,7 +9,7 @@ const aleo = Aleo({ subsets: ["latin"] });
 const SignUpLoginArea = () => {
   return (
     <>
-      <div className="bg-cornSilk py-8 md:py-16">
+      <div className="bg-cornSilk py-8 md:py-24">
         <div className="container">
           <GridCols
             component1={

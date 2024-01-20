@@ -1,42 +1,62 @@
-import React from "react";
-import Image from "next/image";
+"use client";
 
-const features = [
-  {
-    title: "Automatic payment reminders",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non.",
-    image: "/assets/reminder.svg",
-  },
-];
+import React, { useState, useEffect } from "react";
+import Image from "next/image";
+import client from "@/sanity/sanity.client";
+import { PortableText } from "@portabletext/react";
+import Link from "next/link";
+export type AppFeatureType = {
+  name: string;
+  description: any;
+  imageUrl: string; // Add the 'imageUrl' property to the type definition
+};
+import { Button } from "flowbite-react";
+import {HiOutlineArrowNarrowRight} from 'react-icons/hi'
 
 const FeaturesComponent = () => {
+  const [features, setFeatures] = React.useState<FeaturesType[]>([]);
+
+  const query = `*[_type == "appFeature"]{
+    name,
+    description,
+    "imageUrl": image.asset->url,
+  }`;
+
+  React.useEffect(() => {
+    client.fetch(query).then((res) => {
+      setFeatures(res);
+    });
+  }, []);
+
   return (
     <>
-      <div className="container-2 py-8 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {features.map((feature, index) => (
-            <div key={index} className="border rounded-xl border-pakistanGreen p-8">
+      <div className="container grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {features.map((feature, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-start space-y-2 bg-white shadow rounded-xl p-6"
+          >
+            <div className="flex flex-row items-center gap-4">
               <Image
-                src={feature.image}
-                width={50}
-                height={50}
-                alt="Features and Benefits"
+                className="bg-gray-100 bg-earthYellow p-[6px] rounded-lg"
+                src={feature.imageUrl}
+                width={40}
+                height={40}
+                alt={feature.name}
               />
-              <div className="text-lg md:text-xl font-bold mt-4">
-                {feature.title}
-                </div>
+              <h3 className="text-lg font-bold">{feature.name}</h3>
             </div>
-          ))}
-          <div className="border border-pakistanGreen p-8 rounded-xl bg-pakistanGreen text-white">
-            <div className="text-2xl md:text-3xl font-bold">
-              {features[0].title}
-            </div>
-            <div className="text-gray-100 text-sm mt-4">
-              {features[0].description}
+            <div className="text-sm">
+              <PortableText value={feature.description} />
             </div>
           </div>
-        </div>
+        ))}
+        <Link href={""}>
+          <Button color="dark" size={'3xl'} className="col-span-full w-full h-full bg-pakistanGreen text-white hover:bg-tigerEye hover:text-white">
+            <div>Get Started Today</div>
+            <HiOutlineArrowNarrowRight className="ml-2" />
+          </Button>
+        </Link>
       </div>
     </>
   );
