@@ -1,9 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import { Button } from "flowbite-react";
-import { Aleo } from 'next/font/google'
+// import { Button } from "flowbite-react";
+import { Aleo } from "next/font/google";
+import { Button } from "@/components/ui/button";
+import { ChevronRightIcon } from "@radix-ui/react-icons";
 
-const aleo = Aleo({ subsets: ['latin'] })
+const aleo = Aleo({ subsets: ["latin"] });
 
 const Landing = () => {
   return (
@@ -20,9 +22,13 @@ const Landing = () => {
             />
           </div>
           <div className="flex flex-col items-center lg:items-start lg:ml-20">
-            <div className={`text-3xl lg:text-5xl font-bold font-aleo text-center lg:text-left ${aleo.className}`}>
+            <div
+              className={`text-3xl lg:text-5xl font-bold font-aleo text-center lg:text-left ${aleo.className}`}
+            >
               Get Paid Faster, Work Smarter:{" "}
-              <span className="text-pakistanGreen"><span className="">Invoicing</span> Simplified</span>
+              <span className="text-pakistanGreen">
+                <span className="">Invoicing</span> Simplified
+              </span>
             </div>
             <div className="text-lg text-center lg:text-left text-gray-600 mt-4">
               Say goodbye to late payments and manual paperwork. Our intuitive
@@ -30,11 +36,11 @@ const Landing = () => {
               from anywhere.
             </div>
             <div className="flex flex-row items-center gap-4 mt-8">
-              <Button color="dark" className="bg-pakistanGreen" size="lg">
-                Get Started
+              <Button variant={"default"} size={"lg"}>
+                Get Started <ChevronRightIcon className="h-4 w-4" />
               </Button>
-              <Button color="dark" size="lg" outline>
-                Learn More
+              <Button variant={"outline"} size={"lg"}>
+                Learn More <ChevronRightIcon className="h-4 w-4" />
               </Button>
             </div>
           </div>

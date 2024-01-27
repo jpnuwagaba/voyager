@@ -9,7 +9,7 @@ export type TargetMarketType = {
   image: string;
   slug: string;
   callToAction: string;
-  imageUrl: string; // Add the 'imageUrl' property to the type definition
+  imageUrl: string; 
 };
 import { Aleo } from "next/font/google";
 import { PortableText } from '@portabletext/react';
@@ -70,7 +70,6 @@ const TargetMarket = () => {
             </div>
           ))}
         </div>
-
         <div className="container grid grid-col-1 lg:grid-cols-2 items-center gap-6 md:gap-16">
           <div className="flex flex-col items-center transition-all duration-300 ease-in-out">
             <Image

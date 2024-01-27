@@ -10,8 +10,8 @@ export type AppFeatureType = {
   description: any;
   imageUrl: string; // Add the 'imageUrl' property to the type definition
 };
-import { Button } from "flowbite-react";
-import {HiOutlineArrowNarrowRight} from 'react-icons/hi'
+import { Button } from "@/components/ui/button";
+import { ChevronRightIcon } from "@radix-ui/react-icons";
 
 const FeaturesComponent = () => {
   const [features, setFeatures] = useState<AppFeatureType[]>([]);
@@ -30,33 +30,22 @@ const FeaturesComponent = () => {
 
   return (
     <>
-      <div className="container grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {features.map((feature, index) => (
-          <div
-            key={index}
-            className="flex flex-col items-start space-y-2 bg-white shadow rounded-xl p-6"
-          >
-            <div className="flex flex-row items-center gap-4">
+      <div className="container">
+        <div className="container grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-4 items-center">
+          {features.map((feature, index) => (
+            <div key={index} className="flex flex-row items-center gap-4 mt-6">
               <Image
-                className="bg-gray-100 bg-earthYellow p-[6px] rounded-lg"
+                className="bg-gray-100 p-[15px] border rounded-lg"
                 src={feature.imageUrl}
-                width={40}
-                height={40}
+                width={60}
+                height={60}
                 alt={feature.name}
               />
-              <h3 className="text-lg font-bold">{feature.name}</h3>
+              <h3 className="font-bold">{feature.name}</h3>
             </div>
-            <div className="text-sm">
-              <PortableText value={feature.description} />
-            </div>
-          </div>
-        ))}
-        <Link href={""}>
-          <Button color="dark" size={'3xl'} className="col-span-full w-full h-full bg-pakistanGreen text-white hover:bg-tigerEye hover:text-white">
-            <div>Get Started Today</div>
-            <HiOutlineArrowNarrowRight className="ml-2" />
-          </Button>
-        </Link>
+          ))}
+          <Link href={""}></Link>
+        </div>
       </div>
     </>
   );

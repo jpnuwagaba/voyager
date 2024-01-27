@@ -4,6 +4,7 @@ import { Aleo } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import FAQs from '@/components/FAQs'
 
 const inter = Inter({ subsets: ['latin'] })
 const aleo = Aleo({ subsets: ['latin'] })
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Navbar />
         {children}
+        <FAQs />
         <Footer />
       </body>
     </html>

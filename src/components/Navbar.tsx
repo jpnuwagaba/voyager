@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
-import { Button } from "flowbite-react";
+import { Button } from "@/components/ui/button"
 import { CiMenuBurger } from "react-icons/ci";
 import { IoCloseOutline } from "react-icons/io5";
 
@@ -59,14 +59,16 @@ const Navbar = () => {
                 <Link className="hover:text-[#333333]" href={"contact-us"}>
                   Contact
                 </Link>
+                <div className="flex flex-row items-center space-x-2">
                 <Link href={""}>
-                  <Button color="dark" className="bg-pakistanGreen">Sign In</Button>
+                  <Button >Sign In</Button>
                 </Link>
                 <Link href={""}>
-                  <Button color="dark" outline>
+                  <Button variant={'outline'}>
                     Sign Up
                   </Button>
                 </Link>
+                </div>
               </div>
               <div className="cursor-pointer z-50 md:hidden transition-all duration-300 ease-in-out">
                 {menuShow ? (
@@ -78,7 +80,7 @@ const Navbar = () => {
             </div>
           </div>
           {menuShow ? (
-            <div className="absolute top-0 w-full bg-white">
+            <div className="absolute top-0 w-full bg-white scale-in-top">
               <div className="flex flex-col items-center gap-4 text-sm text-gray-600 py-20">
                 <Link className="hover:text-[#333333]" href={"/"}>
                   Home
@@ -93,10 +95,10 @@ const Navbar = () => {
                   Contact
                 </Link>
                 <Link href={""}>
-                  <Button color="dark" className="bg-pakistanGreen">Sign In</Button>
+                  <Button >Sign In</Button>
                 </Link>
                 <Link href={""}>
-                  <Button color="gray" outline className="hover:text-[#333333]">
+                  <Button >
                     Sign Up
                   </Button>
                 </Link>

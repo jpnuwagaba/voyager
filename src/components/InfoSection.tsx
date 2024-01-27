@@ -1,6 +1,6 @@
 import React, { FC } from "react";
-import { Button } from "flowbite-react";
-import {HiOutlineArrowNarrowRight} from 'react-icons/hi'
+import { Button } from "@/components/ui/button";
+import { ChevronRightIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 interface Props {
   title: string;
@@ -34,9 +34,8 @@ const InfoSection: FC<Props> = ({
           <div className={`text-4xl font-bold mb-4 ${aleo.className}`}>{tagline}</div>
           <div className="text-lg text-gray-600 mb-8">{description}</div>
           <Link href={link}>
-            <Button className={callToActionBgColor} color="dark" size="lg">
-              {callToAction}
-              <HiOutlineArrowNarrowRight className="ml-2" />
+            <Button size={'lg'}>
+              {callToAction} <ChevronRightIcon className="h-4 w-4" />
             </Button>
           </Link>
         </div>

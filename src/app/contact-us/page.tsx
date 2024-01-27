@@ -1,11 +1,16 @@
 import React from 'react'
+import PageHeader from '@/components/PageHeader'
+import ContactArea from '@/components/ContactArea'
 
 const page = () => {
   return (
     <>
-      <div className="h-screen bg-[cornSilk] flex flex-col items-center justify-around">
-        <div className="text-3xl font-bold text-center py-24">Contact Us</div>
-      </div>
+      <PageHeader
+        pageName="Contact Us"
+        pageHeading="Have questions or need support? Get in touch with our friendly team for assistance"
+        pageHeadingMini="We're here to help"
+      />
+      <ContactArea />
     </>
   )
 }

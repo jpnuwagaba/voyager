@@ -1,7 +1,7 @@
-import React from "react";
+"use client"
+
+import React, {useRef, useEffect, useState} from "react";
 import Image from "next/image";
-import { Button } from "flowbite-react";
-import {HiOutlineArrowNarrowRight} from 'react-icons/hi'
 
 const Clients = () => {
   return (
@@ -15,47 +15,38 @@ const Clients = () => {
           <hr className="w-[30px] border-gray-700" />
         </div>
         <div className="container flex flex-col items-center">
-          <div className="flex flex-row items-center gap-4 md:gap-12">
+          <div className="flex flex-row items-center gap-4 md:gap-16">
             <Image
               src="/assets/adidas-logo.svg"
               alt="Airbnb"
-              width={50}
-              height={50}
+              width={40}
+              height={40}
             />
             <Image
               src="/assets/adidas-logo.svg"
               alt="Airbnb"
-              width={50}
-              height={50}
+              width={40}
+              height={40}
             />
             <Image
               src="/assets/adidas-logo.svg"
               alt="Airbnb"
-              width={50}
-              height={50}
+              width={40}
+              height={40}
             />
             <Image
               src="/assets/adidas-logo.svg"
               alt="Airbnb"
-              width={50}
-              height={50}
+              width={40}
+              height={40}
             />
             <Image
               src="/assets/adidas-logo.svg"
               alt="Airbnb"
-              width={50}
-              height={50}
+              width={40}
+              height={40}
             />
           </div>
-          <Button
-            className="mt-8 uppercase"
-            color="dark"
-            // size="lg"
-            outline
-          >
-            customer stories
-            <HiOutlineArrowNarrowRight className="ml-2" />
-          </Button>
         </div>
       </div>
       <hr />
