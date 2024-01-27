@@ -16,7 +16,7 @@ import Image from "next/image";
 
 const aleo = Aleo({ subsets: ["latin"] });
 
-const page = () => {
+const AboutUsPageIntro = () => {
   const [aboutUs, setAboutUs] = React.useState<AboutUsType[]>([]);
 
   const query = `*[_type == "aboutUs"]{
@@ -73,4 +73,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default AboutUsPageIntro;

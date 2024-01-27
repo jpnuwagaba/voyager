@@ -63,7 +63,7 @@ export default function PricingCards() {
             }}
           >
             {plans.map((plan) => (
-              <Card size="lg" variant="outlined" sx={{bgcolor: "#FEFAE0"}}>
+              <Card key={plan.name} size="lg" variant="outlined" sx={{bgcolor: "#FEFAE0"}}>
                 <Chip size="sm" variant="outlined" color="neutral">
                   {plan.level}
                 </Chip>
@@ -74,7 +74,7 @@ export default function PricingCards() {
                   sx={{ mx: "calc(-1 * var(--ListItem-paddingX))" }}
                 >
                   {plan.features.map((feature) => (
-                    <ListItem>
+                    <ListItem key={feature}>
                       <ListItemDecorator>
                         <Check />
                       </ListItemDecorator>

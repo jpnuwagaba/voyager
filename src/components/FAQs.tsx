@@ -43,39 +43,29 @@ const FAQs = () => {
           <GridCols
             component1={
               <>
-                {isLoading ? (
-                  <Skeleton width={400} height={250} />
-                ) : (
-                  <>
-                    <div className="text-sm uppercase text-gray-600 mb-4">
-                      faqs
-                    </div>
-                    <div
-                      className={`text-4xl font-bold mb-4 ${aleo.className}`}
-                    >
-                      Everything you need to know
-                    </div>
-                    <div className="text-lg text-gray-600 mb-8">
-                      Discover important details about our product.
-                    </div>
-                  </>
-                )}
+                <>
+                  <div className="text-sm uppercase text-gray-600 mb-4">
+                    faqs
+                  </div>
+                  <div className={`text-4xl font-bold mb-4 ${aleo.className}`}>
+                    Everything you need to know
+                  </div>
+                  <div className="text-lg text-gray-600 mb-8">
+                    Discover important details about our product.
+                  </div>
+                </>
               </>
             }
             component2={
               <>
-                {isLoading ? (
-                  <Skeleton width={400} height={250} />
-                ) : (
-                  <Accordion type="single" collapsible>
-                    {faqs.map((faq, index) => (
-                      <AccordionItem value={`item-${index}`}>
-                        <AccordionTrigger>{faq.question}</AccordionTrigger>
-                        <AccordionContent>{faq.answer}</AccordionContent>
-                      </AccordionItem>
-                    ))}
-                  </Accordion>
-                )}
+                <Accordion type="single" collapsible>
+                  {faqs.map((faq, index) => (
+                    <AccordionItem value={`item-${index}`}>
+                      <AccordionTrigger>{faq.question}</AccordionTrigger>
+                      <AccordionContent>{faq.answer}</AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
               </>
             }
           />
