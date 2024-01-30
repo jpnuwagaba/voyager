@@ -82,22 +82,22 @@ const Navbar = () => {
           {menuShow ? (
             <div className="absolute top-0 w-full bg-white scale-in-top">
               <div className="flex flex-col items-center gap-4 text-sm text-gray-600 py-20">
-                <Link className="hover:text-[#333333]" href={"/"}>
+                <Link onClick={handleMenuShow} className="hover:text-[#333333]" href={"/"}>
                   Home
                 </Link>
-                <Link className="hover:text-[#333333]" href={"pricing"}>
+                <Link onClick={handleMenuShow} className="hover:text-[#333333]" href={"pricing"}>
                   Pricing
                 </Link>
-                <Link className="hover:text-[#333333]" href={"about"}>
+                <Link onClick={handleMenuShow} className="hover:text-[#333333]" href={"about"}>
                   About
                 </Link>
-                <Link className="hover:text-[#333333]" href={"contact-us"}>
+                <Link onClick={handleMenuShow} className="hover:text-[#333333]" href={"contact-us"}>
                   Contact
                 </Link>
-                <Link href={""}>
+                <Link onClick={handleMenuShow} href={""}>
                   <Button >Sign In</Button>
                 </Link>
-                <Link href={""}>
+                <Link onClick={handleMenuShow} href={""}>
                   <Button >
                     Sign Up
                   </Button>

@@ -25,7 +25,7 @@ const Commitments = () => {
               key={index}
               className="flex flex-col items-center bg-cornSilk rounded-xl p-8"
             >
-              <div className="flex flex-row items-center gap-5">
+              <div className="flex flex-col md:flex-row items-start md:items-center gap-5">
                 <Image
                   className="-rotate-12"
                   src="/assets/quality.svg"

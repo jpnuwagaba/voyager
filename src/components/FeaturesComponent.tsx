@@ -30,22 +30,20 @@ const FeaturesComponent = () => {
 
   return (
     <>
-      <div className="container">
-        <div className="container grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-4 items-center">
-          {features.map((feature, index) => (
-            <div key={index} className="flex flex-row items-center gap-4 mt-6">
-              <Image
-                className="bg-gray-100 p-[15px] border rounded-lg"
-                src={feature.imageUrl}
-                width={60}
-                height={60}
-                alt={feature.name}
-              />
-              <h3 className="font-bold">{feature.name}</h3>
-            </div>
-          ))}
-          <Link href={""}></Link>
-        </div>
+      <div className="container grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-4 items-center">
+        {features.map((feature, index) => (
+          <div key={index} className="flex flex-row items-center gap-4 mt-6">
+            <Image
+              className="bg-gray-100 p-[15px] border rounded-lg"
+              src={feature.imageUrl}
+              width={60}
+              height={60}
+              alt={feature.name}
+            />
+            <h3 className="font-bold">{feature.name}</h3>
+          </div>
+        ))}
+        <Link href={""}></Link>
       </div>
     </>
   );

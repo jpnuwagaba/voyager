@@ -8,9 +8,9 @@ const aleo = Aleo({ subsets: ["latin"] });
 const ContactArea = () => {
   return (
     <>
-      <div className="container py-8 md:py-24">        
+      <div className="py-8 md:py-24">        
         <div
-          className={`text-xl font-bold md:text-2xl text-pakistanGreen mb-6 md:mb-12 ${aleo.className}`}
+          className={`container text-xl font-bold md:text-2xl text-pakistanGreen mb-6 md:mb-12 ${aleo.className}`}
         >
           Are you a Voyager Customer looking for Support & Accounts Enquiries?
         </div>

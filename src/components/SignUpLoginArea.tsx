@@ -10,7 +10,6 @@ const SignUpLoginArea = () => {
   return (
     <>
       <div className="bg-cornSilk py-8 md:py-24">
-        <div className="container">
           <GridCols
             component1={
               <>
@@ -38,7 +37,6 @@ const SignUpLoginArea = () => {
             component2={<SignUpForm />}
             itemsAlign="start"
           />
-        </div>
       </div>
     </>
   );

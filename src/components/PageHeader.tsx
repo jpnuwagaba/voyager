@@ -13,7 +13,7 @@ const PageHeader: FC<Props> = ({ pageName, pageHeading, pageHeadingMini }) => {
     <>
       <div className="bg-cornSilk">
         <div className="container">
-          <div className="pt-[200px] pb-[100px] lg:w-[60%] text-pakistanGreen">
+          <div className="pt-40 pb-20 lg:w-[60%] text-pakistanGreen">
             <div
               className={`text-xl md:text-3xl lg:text-4xl ${aleo.className}`}
             >

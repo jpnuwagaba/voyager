@@ -8,16 +8,14 @@ const Plans = () => {
   return (
     <>
       <div className="py-8 md:py-24">
-        <div className={`text-center text-xl md:text-3xl font-bold mb-4 ${aleo.className}`}>
+        <div className={`container text-center text-xl md:text-3xl font-bold mb-4 ${aleo.className}`}>
           Clear and Easy-to-Understand Pricing
         </div>
         <div className="text-center text-gray-500 mb-8 md:mb-16">
           Discover the perfect plan for your invoicing needs, or get assistance
           from our team of professionals.
         </div>
-        <div className="container">
           <PricingCards />
-        </div>
       </div>
     </>
   );

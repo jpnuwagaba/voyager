@@ -55,11 +55,11 @@ const TargetMarket = () => {
             energize your operations.
           </div>
         </div>
-        <div className="flex flex-row flex-wrap items-center justify-center gap-4 my-4 md:my-12">
+        <div className="flex flex-row flex-wrap items-center lg:justify-center gap-4 my-4 md:my-12">
           {targetMarket.map((item, index) => (
             <div
               key={index}
-              className={`text-xs uppercase font-bold py-2 px-3 rounded transition-all duration-300 ease-in-out ${
+              className={`text-xs uppercase font-bold py-2 px-3 rounded transition-all duration-300 ease-in-out scale- ${
                 activeTab === index
                   ? "text-white bg-tigerEye"
                   : "text-gray-600 bg-gray-100"
@@ -70,7 +70,7 @@ const TargetMarket = () => {
             </div>
           ))}
         </div>
-        <div className="container grid grid-col-1 lg:grid-cols-2 items-center gap-6 md:gap-16">
+        <div className="grid grid-col-1 lg:grid-cols-2 items-center gap-6 md:gap-16">
           <div className="flex flex-col items-center transition-all duration-300 ease-in-out">
             <Image
               className="rounded-xl"
