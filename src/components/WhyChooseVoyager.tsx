@@ -33,7 +33,7 @@ const FeaturesComponent = () => {
       <div className="py-8 md:py-24">
         <div className="container">
           <div
-            className={`text-xl md:text-2xl lg:text-3xl font-bold text-center mb-8 ${aleo.className}`}
+            className={`text-2xl lg:text-4xl font-bold text-center mb-8 ${aleo.className}`}
           >
             Why choose Voyager
           </div>

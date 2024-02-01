@@ -40,7 +40,7 @@ const AboutUsPageIntro = () => {
             <>
               {aboutUs.length > 0 && (
                 <div
-                  className={`text-xl md:text-2xl lg:text-3xl font-bold ${aleo.className}`}
+                  className={`text-2xl lg:text-4xl font-bold ${aleo.className}`}
                 >
                   {aboutUs[0].title}
                 </div>

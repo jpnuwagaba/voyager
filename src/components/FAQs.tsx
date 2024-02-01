@@ -44,7 +44,7 @@ const FAQs = () => {
             <>
               <>
                 <div className="text-sm uppercase text-gray-600 mb-4">faqs</div>
-                <div className={`text-4xl font-bold mb-4 ${aleo.className}`}>
+                <div className={`text-2xl md:text-4xl font-bold mb-4 ${aleo.className}`}>
                   Everything you need to know
                 </div>
                 <div className="text-lg text-gray-600 mb-8">

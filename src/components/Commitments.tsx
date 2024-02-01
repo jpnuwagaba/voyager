@@ -6,6 +6,9 @@ export type CommitmentsTypes = {
 };
 import { PortableText } from "@portabletext/react";
 import Image from "next/image";
+import { Aleo } from "next/font/google";
+
+const aleo = Aleo({ subsets: ["latin"] });
 
 const Commitments = () => {
   const [commitments, setCommitments] = React.useState<CommitmentsTypes[]>([]);
@@ -19,6 +22,9 @@ const Commitments = () => {
   return (
     <>
       <div className="py-8 md:py-24">
+        <div className={`container text-center text-2xl md:text-4xl font-bold mb-5 md:mb-10 ${aleo.className}`}>
+          Our Commitments to you
+        </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start container">
           {commitments.map((commitment, index) => (
             <div
