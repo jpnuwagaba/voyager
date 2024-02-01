@@ -1,58 +1,72 @@
+"use client";
+
 import React from "react";
 import { Aleo } from "next/font/google";
 import GridCols from "./GridCols";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Widget } from "@typeform/embed-react";
+import { IoCloseOutline } from "react-icons/io5";
 
 const aleo = Aleo({ subsets: ["latin"] });
 
 const ContactArea = () => {
+  const [showWidget, setShowWidget] = React.useState(false);
+
+  const handleShowWidget = () => {
+    setShowWidget(true);
+  };
+
   return (
     <>
-      <div className="py-8 md:py-24">        
-        <div
-          className={`container text-xl font-bold md:text-2xl text-pakistanGreen mb-6 md:mb-12 ${aleo.className}`}
-        >
-          Are you a Voyager Customer looking for Support & Accounts Enquiries?
-        </div>
+      <div className="pt-40 pb-20 bg-cornSilk">
+        {
+          showWidget && (
+            <div className="fixed top-0 left-0 z-50 w-full h-full">
+              <div className="relative">
+                <Widget
+                  id="q7CCXZck"
+                  // height={500}
+                  className="h-screen"
+                  style={{ 
+                    border: "1px solid #ddd",
+                    // opacity: 0.95,
+                  }}
+                />
+                {
+                  showWidget && (
+                    <div className="absolute top-6 right-6 z-50 cursor-pointer">
+                      <IoCloseOutline size={'2rem'} onClick={() => setShowWidget(false)} />
+                    </div>
+                  )
+                }
+              </div>
+            </div>
+          )
+        }
         <GridCols
           component1={
             <>
-              <div className="flex flex-row items-center space-x-4 mb-4">
-                <Image
-                  src="/assets/support.svg"
-                  alt="phone"
-                  width={40}
-                  height={40}
-                />
-                <div className="font-bold text-lg">Support</div>
+              <div
+                className={`text-xl md:text-3xl lg:text-4xl ${aleo.className}`}
+              >
+                Have questions or need support? Or ready to create an invoice?
+                Get in touch with our friendly team for assistance
               </div>
-              <div className="">
-                For password resets, please use the{" "}
-                <span className="font-bold">Password Reset</span> function on
-                the Voyager Login page or click here. If you are unable to lodge
-                a request through the{" "}
-                <span className="font-bold">Help Tab</span> in
+              {/* <div className="text-sm uppercase mt-5">contact us</div> */}
+              <div className="mt-5">
+                <Button onClick={handleShowWidget} className="uppercase">talk to us</Button>
               </div>
             </>
           }
           component2={
             <>
-              <div className="flex flex-row items-center space-x-4 mb-4">
-                <Image
-                  src="/assets/accounts.svg"
-                  alt="phone"
-                  width={40}
-                  height={40}
-                />
-                <div className="font-bold text-lg">Accounts</div>
-              </div>
-              <div className="">
-                For password resets, please use the{" "}
-                <span className="font-bold">Password Reset</span> function on
-                the Voyager Login page or click here. If you are unable to lodge
-                a request through the{" "}
-                <span className="font-bold">Help Tab</span> in
-              </div>
+              <Image
+                src="/assets/get-started.png"
+                alt="Ready to get started?"
+                width={500}
+                height={500}
+              />
             </>
           }
         />
